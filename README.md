@@ -33,32 +33,20 @@
    После успешного соединения с базой данных, будет создана таблица tasks.
 
 
-
 Использование API
 Создание задачи
-Метод: POST /tasks
-Описание: Создает новую задачу.
-Метод: POST /tasks
-Описание: Создать новую задачу.
-Запрос:
-Заголовки:
-Content-Type: application/json
-Тело:
-{
-"title": "string",
-"description": "string",
-"due_date": "string (RFC3339 format)"
-}
-Ответ:
-Успех (201 Created):
-{
-"id": "int",
-"title": "string",
-"description": "string",
-"due_date": "string (RFC3339 format)",
-"created_at": "string (RFC3339 format)",
-"updated_at": "string (RFC3339 format)"
-}
-Ошибка (400 Bad Request): Неправильный формат данных.
-Ошибка (500 Internal Server Error): Проблема на сервере.
+POST /tasks
+
+Просмотр списка задач
+GET /tasks
+
+Просмотр задачи по ID
+GET /tasks/{id}
+
+Обновление задачи
+PUT /tasks/{id}
+
+Удаление задачи
+DELETE /tasks/{id}
+
 
