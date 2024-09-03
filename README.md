@@ -38,22 +38,27 @@
 Создание задачи
 Метод: POST /tasks
 Описание: Создает новую задачу.
-Тело запроса:
-
+Метод: POST /tasks
+Описание: Создать новую задачу.
+Запрос:
+Заголовки:
+Content-Type: application/json
+Тело:
 {
-    "title": "Название задачи",
-    "description": "Описание задачи",
-    "due_date": "2024-09-10T10:00:00Z"
+"title": "string",
+"description": "string",
+"due_date": "string (RFC3339 format)"
 }
 Ответ:
 Успех (201 Created):
-
 {
-    "id": 1,
-    "title": "Название задачи",
-    "description": "Описание задачи",
-    "due_date": "2024-09-10T10:00:00Z",
-    "created_at": "2024-09-03T10:00:00Z",
-    "updated_at": "2024-09-03T10:00:00Z"
+"id": "int",
+"title": "string",
+"description": "string",
+"due_date": "string (RFC3339 format)",
+"created_at": "string (RFC3339 format)",
+"updated_at": "string (RFC3339 format)"
 }
+Ошибка (400 Bad Request): Неправильный формат данных.
+Ошибка (500 Internal Server Error): Проблема на сервере.
 
