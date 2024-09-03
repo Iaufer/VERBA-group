@@ -11,7 +11,7 @@
 
 1. **Клонируйте репозиторий**
 
-   git clone <URL вашего репозитория>
+   git clone <https://github.com/Iaufer/VERBA-group>
 
 
 2. Запустите приложение
